@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #4b79a1 #283e51);
+    font-family: "Montserrat", sans-serif;
+}
+
+.app {
+    height: 100vh;
+}
+
+.message_animation {
+    transform-origin: bottom right;
+    animation-name: bounce;
+    animation-duration: 300ms;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: backwards;
+}
+
+@keyframes bounce {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
